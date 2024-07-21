@@ -1,0 +1,1312 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+
+</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" /><meta name="author" content="Mosaddek" /><meta name="keyword" /><link rel="shortcut icon" href="images/favicon.png" />
+    <!-- Bootstrap core CSS -->
+    <link href="https://exam.shekhauniexam.in/css/bootstrap.min.css" rel="stylesheet" />
+    <!--external css-->
+    <link href="https://exam.shekhauniexam.in/css/font-awesome.css" rel="stylesheet" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        @media print {
+            td {
+                padding: 3px;
+            }
+        }
+        /*td {
+            border: 1px solid black;
+        }*/
+
+        th {
+            border: 1px solid black !important;
+        }
+
+        td {
+            border: 1px solid black !important;
+        }
+
+        .left_bdr {
+            border-left: 1px solid black !important;
+        }
+
+        .upper_bdr {
+            border-top: 1px solid black !important;
+        }
+
+        .bottom_bdr {
+            border-bottom: 1px solid black !important;
+        }
+
+        .right_bdr {
+            border-right: 1px solid black !important;
+        }
+
+        .btm-rt_bdr {
+            border-right: 1px solid black !important;
+            border-bottom: 1px solid black !important;
+        }
+
+        .bt-rt-lt_bdr {
+            border-right: 1px solid black !important;
+            border-bottom: 1px solid black !important;
+            border-left: 1px solid black !important;
+        }
+
+        .all-bdr {
+            border: 1px solid black !important;
+        }
+
+        .auto-style1 {
+            font-size: 12px;
+            color: #000000;
+            vertical-align: bottom;
+        }
+
+        .auto-style2 {
+            margin-left: 200px;
+        }
+
+        td {
+            padding: 2px;
+            color: black;
+            font-size: 10px;
+            /* border: 1px solid #0a0a0a; */
+        }
+
+        span {
+            color: black;
+            font-size: 11px;
+        }
+
+        strong {
+            color: black;
+            font-size: 12px;
+        }
+    </style>
+
+    <link href="https://exam.shekhauniexam.in/css/style_print.css" rel="stylesheet" />
+    <script>
+        localStorage.removeItem("check");
+        localStorage.removeItem("Course_Type");
+        localStorage.removeItem("ddl_course_name");
+        localStorage.removeItem("Course_Type");
+        localStorage.removeItem("year_part");
+        localStorage.removeItem("stdnt_type");
+    </script>
+</head>
+<body>
+    <form method="post" action="https://exam.shekhauniexam.in/Print_Form_UG_NEP.aspx?reg_id=MjQwMzgyODQ5" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3F3E0067" />
+        <div>
+            <div class="" style="width: 100%">
+                <div style="width: 860px; margin: auto; border: 1px solid #CCCCCC;">
+
+                    <table width="100%" style="background: #ffffffd1;">
+                        <tbody>
+                            <tr>
+                                <td class="left_bdr bottom_bdr upper_bdr" rowspan="2">
+                                    <img src="https://exam.shekhauniexam.in/images/logo.png" style="width: 120px;" /></td>
+                                <td class="upper_bdr" align="center" width="20%"><span>Form Filled Date: </span>
+                                    <span id="lblcdate">30/05/2024</span></td>
+                                
+
+                                <td class="upper_bdr right_bdr" align="center" colspan="3"><span style="font-weight: bold;">STUDENT COPY</span></td>
+                            </tr>
+                            <tr>
+
+                                <td class="right_bdr bottom_bdr" colspan="4" align="center">
+                                    <h3 class="college-name">PANDIT DEENDAYAL UPADHYAYA SHEKHAWATI UNIVERSITY, SIKAR (RAJ.)</h3>
+                                    <p>
+                                        <span id="lblcourse" class="course">B.A. SEMESTER II</span><strong class="course"> EXAM-2024
+                                        (<span id="lblstype" class="course">REGULAR</span>)
+                                           <span id="Label85" class="course"></span>
+                                        </strong>
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="left_bdr" colspan="4"><strong>College :</strong>
+                                    <span id="lblcollege">(489)-RAJKIYA KANYA MAHAVIDYALAYA AJEETGARH,  DISTT - SIKAR</span></td>
+                                <td class="left_bdr btm-rt_bdr"><strong>Form No. :
+                                    <span id="lblformno">240382849</span></strong></td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="4"><strong>Exam Center :</strong></td>
+                                <td class="left_bdr btm-rt_bdr"><strong>Roll No. :</strong>
+                                    <span id="lblrollno">24163378</span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Student's Name :</strong> <b>
+                                    <span id="lblname">DIVYANSHI GUPTA</span></b></td>
+                                <td rowspan="12" style="vertical-align: middle; width: 10%;">
+                                    </td>
+                                <td class="left_bdr btm-rt_bdr" rowspan="6" align="center" style="padding: 0px; !important;">
+                                    
+                                    <img id="ImgPhoto" src="https://exam.shekhauniexam.in/Image_2024/Photo/1e52a8dd-e3fc-4e7d-8e39-461f0781aae9.jpg" height="150" width="150" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Name in Hindi :</strong><b>
+                                    <span id="lblhname">दिव्यांशी गुप्ता</span>
+                                </b></td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="2"><strong>Father's Name :</strong>
+                                    <span id="lblfname">NARENDRA KUMAR GUPTA</span>
+                                </td>
+                                <td><strong>Father's Name Hindi :</strong>
+                                    <span id="lblfhname">नरेंद्र कुमार गुप्ता</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="2"><strong>Mother's Name :</strong>
+                                    <span id="lblmname">ANJU DEVI</span>
+                                </td>
+                                <td><strong>Mother's Name Hindi :</strong>
+                                    <span id="lblmhname">अंजू देवी</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="2"><strong>Category :</strong>
+                                    <span id="lblcast">GENERAL</span>
+                                </td>
+                                <td><strong>Sub Category :</strong>
+                                    <span id="lblsubcast">NOT APPLICABLE</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="2"><strong>Religion :</strong>
+                                    <span id="lblreligion">HINDUISM</span>
+                                </td>
+                                <td><strong>E-Mail Id :</strong>
+                                    <span id="lblEmail">ANJUG9976@GMAIL.COM</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="2"><strong>Gender :</strong>
+                                    <span id="lblgender">FEMALE</span>
+                                </td>
+                                <td><strong>Aadhar No. :</strong>
+                                    <span id="lblAadharNo">763156479345</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong> </strong>
+                                    
+                                    <strong>ABC ID. :</strong>
+                                    <span id="lbl_ABCID">803514376040</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Date Of Birth :</strong><span id="lbldob">27/07/2005</span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Medium :</strong>
+                                    <span id="lblmedium">Hindi</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Mobile No. :</strong>
+                                    <span id="lblmobile">7878587739</span>
+                                </td>
+                                <td class="left_bdr btm-rt_bdr upper_bdr" rowspan="3">
+                                    <center>
+                       <img id="ImgSign" src="Image_2024/Sign/b6d0fce3-eeae-4177-8ed5-944ed18ee588.jpg" height="70" width="150" />
+				                                                         </center>
+                                    <p>Signature of Candidate</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Address :</strong>
+                                    <span id="lbladdess">WARD NO-11 VPO- THOI THOI SIKAR RAJASTHAN 332719</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr bottom_bdr" colspan="2"><strong>Already Enrolled :</strong><span id="lblenrolled">YES</span></td>
+                                <td class="bottom_bdr">
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td id="enroll"><strong>Enrollment No.:</strong>
+                                                    <span id="lblenrollno">23/141609</span>
+                                                </td>
+
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="left_bdr">
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr upper_bdr" colspan="4" align="center"><strong>Details of Fee (Received)</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr" colspan="4" align="center">Payment Method :
+                                                    <span id="lblpaymentmode">Emitra</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr" colspan="4" align="center">Trans. id Token No. & Date :-
+                                                    <span id="lbltranno">240625178583</span>
+                                                    /
+                                                    <span id="lbltrandate">30/05/2024</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr" width="25%">Exam Fee</td>
+                                                <td class="bt-rt-lt_bdr" width="25%">Rs. 
+                                                    <span id="lblexamfee">1300.00</span></td>
+                                                <td class="bt-rt-lt_bdr" width="25%">Late Fee</td>
+                                                <td class="bt-rt-lt_bdr" width="25%">Rs. 
+                                                    <span id="lbllatefee">0.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr">Enrol Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="lblenrolfee">0.00</span></td>
+                                                <td class="bt-rt-lt_bdr">Elig Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="lbleligfee">0.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr">Spe.Devp Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="lbldevpfee">0.00</span></td>
+                                                <td class="bt-rt-lt_bdr">Sports Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="lblsportsfee">0.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr">Due Paper Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="lblduefee">0.00</span>
+                                                </td>
+                                                <td class="bt-rt-lt_bdr">Practical Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="lblpractfee">100.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr">Practical Training Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs.  
+                                                    <span id="lblpractrfee">0.00</span></td>
+                                                <td class="bt-rt-lt_bdr">Total Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="lbltotalfee">1400.00</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td colspan="3" class="right_bdr" style="vertical-align: top;">
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr upper_bdr" colspan="3" align="center"><b>COMPILATION OF MARKS</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr upper_bdr" align="center">PART 1</td>
+                                                <td class="bt-rt-lt_bdr upper_bdr" align="center">PART 2</td>
+                                                <td class="bt-rt-lt_bdr upper_bdr" align="center">PART 3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr upper_bdr">
+                                                    <span id="Label76"></span></td>
+                                                <td class="bt-rt-lt_bdr upper_bdr">
+                                                    <span id="Label77"></span></td>
+                                                <td class="bt-rt-lt_bdr upper_bdr">
+                                                    <span id="Label78"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr upper_bdr" colspan="3"><strong>Details of last Qualifying Examination passed</strong></td>
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td colspan="3">
+                                                    <div>
+	<table cellspacing="0" rules="all" class="all-bdr" border="1" id="grdPreExaminations" width="100%">
+		<tr>
+			<th scope="col">Name of Examination</th><th scope="col">Board/University</th><th scope="col"> Passing Year</th><th scope="col">Roll No</th><th scope="col">Marks</th><th scope="col">Result</th>
+		</tr><tr>
+			<td>Part-1</td><td> PDUSU SIKAR</td><td> 2024</td><td>24163378</td><td>
+                                                                    <span id="grdPreExaminations_lblObtMarks3_0">363</span>
+                                                                    /<span id="grdPreExaminations_lblMaxMarks3_0">500</span>
+                                                                </td><td>PAPR</td>
+		</tr>
+	</table>
+</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td colspan="5" class="bt-rt-lt_bdr">
+                                    
+                                    
+
+                                    
+                                    
+                                    
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="5" class="bt-rt-lt_bdr">
+                                    <table width="100%">
+                                        <tr>
+                                            <td class="btm-rt_bdr" align="center">
+                                                <h5>Subject / Papers Details for Examination 2024</h5>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="bt-rt-lt_bdr" style="padding: 0px;">
+                                                <table width="100%">
+                                                    <tr>
+                                                        <td class="btm-rt_bdr" align="center" style="width: 25%;">
+                                                            <h5>AEC</h5>
+                                                        </td>
+                                                        <td class="btm-rt_bdr" align="center" style="width: 25%;">
+                                                            <h5>SEMESTER I</h5>
+                                                        </td>
+                                                        <td class="btm-rt_bdr" align="center" style="width: 25%;">
+                                                            <h5>SEMESTER II</h5>
+                                                        </td>
+                                                        <td id="main" class="bottom_bdr" align="center" style="width: 25%;">
+                                                            <h5>SEMESTER III</h5>
+                                                        </td>
+
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="right_bdr">
+                                                            <div>
+	<table cellspacing="0" rules="all" class="all-bdr" border="1" id="grdcomp1" width="100%">
+		<tr>
+			<th scope="col">Paper Code-Paper</th>
+		</tr><tr>
+			<td>
+                                                                            <span id="grdcomp1_Paper_0">(UG0105)- (GEN-52T-101)- A COMPREHENSIVE INTRODUCTION</span>
+                                                                        </td>
+		</tr>
+	</table>
+</div>
+                                                        </td>
+                                                        <td style="vertical-align: top;">
+                                                            <div>
+
+</div>
+                                                        </td>
+                                                        <td style="vertical-align: top;">
+                                                            <div>
+	<table cellspacing="0" rules="all" class="all-bdr" border="1" id="grdpart2" width="100%">
+		<tr>
+			<th scope="col">Paper Code-Paper</th>
+		</tr><tr>
+			<td>
+                                                                            <span id="grdpart2_Paper_0">(UG0106)- (GEO-52T-103)- GEOGRAPHY OF RAJASTHAN</span>
+                                                                        </td>
+		</tr><tr>
+			<td>
+                                                                            <span id="grdpart2_Paper_1">(UG0106)- (GEO-52P-104)- GEOGRAPHY OF RAJASTHAN(PR)</span>
+                                                                        </td>
+		</tr><tr>
+			<td>
+                                                                            <span id="grdpart2_Paper_2">(UG0113)- (POL-52T-102)- INDIAN POLITICAL THOUGHT </span>
+                                                                        </td>
+		</tr><tr>
+			<td>
+                                                                            <span id="grdpart2_Paper_3">(UG0116)- (SAN-52T-102)- BHARTIYA SANSKRATI KE TATVA,PADH SAHITYA,VYAKARAN</span>
+                                                                        </td>
+		</tr>
+	</table>
+</div>
+                                                            <div>
+
+</div>
+                                                        </td>
+                                                        <td style="vertical-align: top;">
+                                                            <div>
+
+</div>
+                                                            <div>
+
+</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="bt-rt-lt_bdr">
+                                    <p class="subject">Certified that all above entries are correct to the best of my knowledge and belief. I am not appearing in any other University examination and there is no Um case against me. I have deposited Examination fee. Fee once deposited will not be refundable.   </p>
+                                    <p class="sign">Signature of Student</p>
+                                    <p class="subject">Certified that all above entries are checked and verified by college and student is eligible to appear in above mentioned examination. Examination fee has been deposited through emitra.</p>
+                                    <p class="sign">Signature and seal of principal</p>
+                                    <p class="subject">
+                                        All entries have been verified and checked through record and documents provided by student. Student is qualified / not qualified to apear in <span>
+                                            <span id="lblyearpart">B.A. SEMESTER II</span></span>
+                                    </p>
+                                    <p class="sign">Full signature of checker in university</p>
+                                </td>
+
+                                <table width="100%">
+                                    <br />
+                                    
+                                </table>
+                                <br />
+                                
+                            </tr>
+
+                            <tr>
+                                <td colspan="5" class="bt-rt-lt_bdr">
+                                    <p class="note-head">अभ्यर्थी हेतु नोट : </p>
+                                    <p class="hindi">
+                                        (1).अभ्यर्थी  यह भली भांति जाँच ले की फॉर्म नंबर , पेमेंट आई०  डी ०, टोकन नंबर , फॉर्म की प्रत्येक प्रति में एक समान एवं सही मुद्रित हुआ है ।
+				 (2).  पूर्ण भरे हुए आवेदन पत्र में यथा स्थान पर अपने हस्ताक्षर कर परीक्षा आवेदन पत्र की दोनों प्रतियां मय संलग्नको सम्बंधित महाविद्यालय में विशवविद्यालय द्वारा घोषित समय सीमा में आवश्यक रूप से जमा करावे ।
+                                        (3).नियमित एवं स्वयंपाठी छात्र अपना परीक्षा पत्र सम्बंधित महाविद्यालय में जमा करावे ।      
+                                       (4).शुल्क एक बार जमा कराने के बाद लौटाया नहीं जायेगा ।	     
+                                       (5). जिन छात्रों द्वारा पूर्व में PANDIT DEENDAYAL UPADHYAYA SHEKHAWATI UNIVERSITY, SIKAR (RAJ.) में नामांकन (एनरोलमेंट) नहीं करवाया गया है , ऐसे राजस्थान माध्यमिक शिक्षा बोर्ड , अजमेर से 12 वी कक्षा उत्तीर्ण छात्रों को छोड़कर अन्य छात्र नामांकन फॉर्म , मूल अंकतालिका एवं मूल माइग्रेशन प्रमाण पत्र परीक्षा आवेदन पत्र के साथ आवश्यक रूप से संलग्न कर जमा करावे । नामांकित छात्र अंकतालिका की छाया प्रति (फोटो कॉपी) संलग्न करे ।	
+                                        (6).अभ्यर्थी , शुलक जमा कराने के बाद पूर्ण  भरे हुए आवेदन पत्र की फोटो प्रति एवं जमा करए गए शुल्क की रसीद अपने पास संधारित करे ।
+				(7).परीक्षा से सम्बंधित दिशा निर्देश विश्व्विद्यालय की परीक्षा कार्य की वेबसाइट https://shekhauniexam.in/ पर  देखे जा सकते है ।					  
+                                    </p>
+                                    <p class="note-head">महाविद्यालय / परीक्षा केंद्र हेतु नोट  : </p>
+                                    <p class="hindi">सम्बंधित महाविद्यालय , परीक्षार्थी का फॉर्म जमा कराने से पूर्व आवेदन-पत्र की भली भांति जाँच कर सुनिश्चित कर ले की अभ्यर्थी परीक्षा के लिए योग्य है तथा उसके द्वारा फॉर्म में भरी गई समस्त सूचनाएं सही है । यदि किसी भी प्रकार की कमी के कारण न्यायिक वाद उत्पन होता है तो उसके लिए सम्बंधित महाविद्यालय उत्तरदायी होगा ।</p>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+                <p style="page-break-after: always; margin: 0px; padding: 0px; height: 0px;">
+                </p>
+                <div style="width: 860px; margin: auto; border: 1px solid #CCCCCC;">
+
+                    <table width="100%" style="background: #ffffffd1;">
+                        <tbody>
+                            <tr>
+                                <td class="left_bdr bottom_bdr upper_bdr" rowspan="2">
+                                    <img src="images/logo.png" style="width: 120px;" /></td>
+                                <td class="upper_bdr" align="center" width="20%"><span>Form Filled Date: </span>
+                                    <span id="Label1">30/05/2024</span></td>
+                                
+                                <td class="upper_bdr right_bdr" align="center" colspan="3"><span style="font-weight: bold;">COLLEGE COPY</span></td>
+                            </tr>
+                            <tr>
+
+                                <td class="right_bdr bottom_bdr" colspan="4" align="center">
+                                    <h3 class="college-name">PANDIT DEENDAYAL UPADHYAYA SHEKHAWATI UNIVERSITY, SIKAR (RAJ.)</h3>
+                                    <p>
+                                        <span id="Label2" class="course">B.A. SEMESTER II</span><strong class="course"> EXAM-2024
+                                        (<span id="Label3" class="course">REGULAR</span>)
+                                             <span id="Label86" class="course"></span>
+                                        </strong>
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="left_bdr" colspan="4"><strong>College :</strong>
+                                    <span id="Label4">(489)-RAJKIYA KANYA MAHAVIDYALAYA AJEETGARH,  DISTT - SIKAR</span></td>
+                                <td class="left_bdr btm-rt_bdr"><strong>Form No. :
+                                    <span id="Label5">240382849</span></strong></td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="4"><strong>Exam Center :</strong></td>
+                                <td class="left_bdr btm-rt_bdr"><strong>Roll No. :</strong>
+                                    <span id="Label6">24163378</span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Student's Name :</strong> <b>
+                                    <span id="Label7">DIVYANSHI GUPTA</span></b></td>
+                                <td rowspan="12" style="vertical-align: middle; width: 10%;">
+                                    </td>
+                                <td class="left_bdr btm-rt_bdr" rowspan="6" align="center" style="padding: 0px; !important;">
+                                    
+                                    <img id="Image1" src="Image_2024/Photo/1e52a8dd-e3fc-4e7d-8e39-461f0781aae9.jpg" height="150" width="150" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Name in Hindi :</strong><b>
+                                    <span id="Label8">दिव्यांशी गुप्ता</span>
+                                </b></td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="2"><strong>Father's Name :</strong>
+                                    <span id="Label9">NARENDRA KUMAR GUPTA</span>
+                                </td>
+                                <td><strong>Father's Name Hindi :</strong>
+                                    <span id="Label10">नरेंद्र कुमार गुप्ता</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="2"><strong>Mother's Name :</strong>
+                                    <span id="Label11">ANJU DEVI</span>
+                                </td>
+                                <td><strong>Mother's Name Hindi :</strong>
+                                    <span id="Label12">अंजू देवी</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="2"><strong>Category :</strong>
+                                    <span id="Label13">GENERAL</span>
+                                </td>
+                                <td><strong>Sub Category :</strong>
+                                    <span id="Label14">NOT APPLICABLE</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="2"><strong>Religion :</strong>
+                                    <span id="Label15">HINDUISM</span>
+                                </td>
+                                <td><strong>E-Mail Id :</strong>
+                                    <span id="lblEmailid1">ANJUG9976@GMAIL.COM</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="2"><strong>Gender :</strong>
+                                    <span id="Label16">FEMALE</span>
+                                </td>
+                                <td><strong>Aadhar :</strong>
+                                    <span id="lblAadharNo1">763156479345</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong> </strong>
+                                    
+                                    <strong>ABC ID. :</strong>
+                                    <span id="lbl_ABCID1">803514376040</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Date Of Birth :</strong><span id="Label17">27/07/2005</span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Medium :</strong>
+                                    <span id="Label18">Hindi</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Mobile No. :</strong>
+                                    <span id="Label19">7878587739</span>
+                                </td>
+                                <td class="left_bdr btm-rt_bdr upper_bdr" rowspan="3">
+                                    <center>
+                       <img id="Image2" src="Image_2024/Sign/b6d0fce3-eeae-4177-8ed5-944ed18ee588.jpg" height="70" width="150" />
+				                                                         </center>
+                                    <p>Signature of Candidate</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Address :</strong>
+                                    <span id="Label20">WARD NO-11 VPO- THOI THOI SIKAR RAJASTHAN 332719</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr bottom_bdr" colspan="2"><strong>Already Enrolled :</strong><span id="Label21">YES</span></td>
+                                <td class="bottom_bdr">
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td id="Td1"><strong>Enrollment No.:</strong>
+                                                    <span id="Label22">23/141609</span>
+                                                </td>
+
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="left_bdr">
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr upper_bdr" colspan="4" align="center"><strong>Details of Fee (Received)</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr" colspan="4" align="center">Payment Method :  
+                                                    <span id="Label71">Emitra</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr" colspan="4" align="center">Trans. id Token No. & Date :-
+                                                    <span id="Label23">240625178583</span>
+                                                    /
+                                                    <span id="Label24">30/05/2024</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr" width="25%">Exam Fee</td>
+                                                <td class="bt-rt-lt_bdr" width="25%">Rs. 
+                                                    <span id="Label25">1300.00</span></td>
+                                                <td class="bt-rt-lt_bdr" width="25%">Late Fee</td>
+                                                <td class="bt-rt-lt_bdr" width="25%">Rs. 
+                                                    <span id="Label26">0.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr">Enrol Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="Label27">0.00</span></td>
+                                                <td class="bt-rt-lt_bdr">Elig Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="Label28">0.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr">Spe.Devp Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="Label29">0.00</span></td>
+                                                <td class="bt-rt-lt_bdr">Sports Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="Label30">0.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr">Due Paper Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="Label31">0.00</span>
+                                                </td>
+                                                <td class="bt-rt-lt_bdr">Practical Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="Label32">100.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr">Practical Training Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs.  
+                                                    <span id="Label33">0.00</span></td>
+                                                <td class="bt-rt-lt_bdr">Total Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="Label34">1400.00</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td colspan="3" class="right_bdr" style="vertical-align: top;">
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr upper_bdr" colspan="3" align="center"><b>COMPILATION OF MARKS</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr upper_bdr" align="center">PART 1</td>
+                                                <td class="bt-rt-lt_bdr upper_bdr" align="center">PART 2</td>
+                                                <td class="bt-rt-lt_bdr upper_bdr" align="center">PART 3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr upper_bdr">
+                                                    <span id="Label79"></span></td>
+                                                <td class="bt-rt-lt_bdr upper_bdr">
+                                                    <span id="Label80"></span></td>
+                                                <td class="bt-rt-lt_bdr upper_bdr">
+                                                    <span id="Label81"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr upper_bdr" colspan="5"><strong>Details of last Qualifying Examination passed</strong></td>
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td colspan="3">
+                                                    <div>
+	<table cellspacing="0" rules="all" class="all-bdr" border="1" id="GridView1" width="100%">
+		<tr>
+			<th scope="col">Name of Examination</th><th scope="col">Board/University</th><th scope="col"> Passing Year</th><th scope="col">Roll No</th><th scope="col">Marks</th><th scope="col">Result</th>
+		</tr><tr>
+			<td>Part-1</td><td> PDUSU SIKAR</td><td> 2024</td><td>24163378</td><td>
+                                                                    <span id="GridView1_lblObtMarks3_0">363</span>
+                                                                    /<span id="GridView1_lblMaxMarks3_0">500</span>
+                                                                </td><td>PAPR</td>
+		</tr>
+	</table>
+</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td colspan="5" class="bt-rt-lt_bdr">
+                                    
+                                    
+
+                                    
+                                    
+                                    
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="5" class="bt-rt-lt_bdr">
+                                    <table width="100%">
+                                        <tr>
+                                            <td class="btm-rt_bdr" align="center">
+                                                <h5>Subject / Papers Details for Examination 2024</h5>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="bt-rt-lt_bdr" style="padding: 0px;">
+                                                <table width="100%">
+                                                    <tr>
+                                                        <td class="btm-rt_bdr" align="center" style="width: 25%;">
+                                                            <h5>AEC</h5>
+                                                        </td>
+                                                        <td class="btm-rt_bdr" align="center" style="width: 25%;">
+                                                            <h5>SEMESTER I</h5>
+                                                        </td>
+                                                        <td class="btm-rt_bdr" align="center" style="width: 25%;">
+                                                            <h5>SEMESTER II</h5>
+                                                        </td>
+                                                        <td id="Td3" class="bottom_bdr" align="center" style="width: 25%;">
+                                                            <h5>SEMESTER III</h5>
+                                                        </td>
+
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="right_bdr">
+                                                            <div>
+	<table cellspacing="0" rules="all" class="all-bdr" border="1" id="grdcomp2" width="100%">
+		<tr>
+			<th scope="col">Paper Code-Paper</th>
+		</tr><tr>
+			<td>
+                                                                            <span id="grdcomp2_Paper_0">(UG0105)- (GEN-52T-101)- A COMPREHENSIVE INTRODUCTION</span>
+                                                                        </td>
+		</tr>
+	</table>
+</div>
+                                                        </td>
+                                                        <td style="vertical-align: top;">
+                                                            <div>
+
+</div>
+                                                        </td>
+                                                        <td style="vertical-align: top;">
+                                                            <div>
+	<table cellspacing="0" rules="all" class="all-bdr" border="1" id="grdpart4" width="100%">
+		<tr>
+			<th scope="col">Paper Code-Paper</th>
+		</tr><tr>
+			<td>
+                                                                            <span id="grdpart4_Paper_0">(UG0106)- (GEO-52T-103)- GEOGRAPHY OF RAJASTHAN</span>
+                                                                        </td>
+		</tr><tr>
+			<td>
+                                                                            <span id="grdpart4_Paper_1">(UG0106)- (GEO-52P-104)- GEOGRAPHY OF RAJASTHAN(PR)</span>
+                                                                        </td>
+		</tr><tr>
+			<td>
+                                                                            <span id="grdpart4_Paper_2">(UG0113)- (POL-52T-102)- INDIAN POLITICAL THOUGHT </span>
+                                                                        </td>
+		</tr><tr>
+			<td>
+                                                                            <span id="grdpart4_Paper_3">(UG0116)- (SAN-52T-102)- BHARTIYA SANSKRATI KE TATVA,PADH SAHITYA,VYAKARAN</span>
+                                                                        </td>
+		</tr>
+	</table>
+</div>
+                                                            <div>
+
+</div>
+                                                        </td>
+                                                        <td style="vertical-align: top;">
+                                                            <div>
+
+</div>
+                                                            <div>
+
+</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                    </table>
+                    </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="bt-rt-lt_bdr">
+                                    <p class="subject">Certified that all above entries are correct to the best of my knowledge and belief. I am not appearing in any other University examination and there is no Um case against me. I have deposited Examination fee. Fee once deposited will not be refundable.   </p>
+                                    <p class="sign">Signature of Student</p>
+                                    <p class="subject">Certified that all above entries are checked and verified by college and student is eligible to appear in above mentioned examination. Examination fee has been deposited through emitra.</p>
+                                    <p class="sign">Signature and seal of principal</p>
+                                    <p class="subject">
+                                        All entries have been verified and checked through record and documents provided by student. Student is qualified / not qualified to apear in <span>
+                                            <span id="Label35">B.A. SEMESTER II</span></span>
+                                    </p>
+                                    <p class="sign">Full signature of checker in university</p>
+                                </td>
+                                <br />
+                                
+                                <br />
+                                
+                            </tr>
+                    <tr>
+                        <td colspan="5" class="bt-rt-lt_bdr">
+                            <p class="note-head">अभ्यर्थी हेतु नोट :  : </p>
+                            <p class="hindi">
+                                (1).अभ्यर्थी  यह भली भांति जाँच ले की फॉर्म नंबर , पेमेंट आई०  डी ०, टोकन नंबर , फॉर्म की प्रत्येक प्रति में एक समान एवं सही मुद्रित हुआ है ।
+				 (2).  पूर्ण भरे हुए आवेदन पत्र में यथा स्थान पर अपने हस्ताक्षर कर परीक्षा आवेदन पत्र की दोनों प्रतियां मय संलग्नको सम्बंधित महाविद्यालय में विशवविद्यालय द्वारा घोषित समय सीमा में आवश्यक रूप से जमा करावे ।
+                                        (3).नियमित एवं स्वयंपाठी छात्र अपना परीक्षा पत्र सम्बंधित महाविद्यालय में जमा करावे ।      
+                                       (4).शुल्क एक बार जमा कराने के बाद लौटाया नहीं जायेगा ।	     
+                                       (5). जिन छात्रों द्वारा पूर्व में PANDIT DEENDAYAL UPADHYAYA SHEKHAWATI UNIVERSITY, SIKAR (RAJ.) में नामांकन (एनरोलमेंट) नहीं करवाया गया है , ऐसे राजस्थान माध्यमिक शिक्षा बोर्ड , अजमेर से 12 वी कक्षा उत्तीर्ण छात्रों को छोड़कर अन्य छात्र नामांकन फॉर्म , मूल अंकतालिका एवं मूल माइग्रेशन प्रमाण पत्र परीक्षा आवेदन पत्र के साथ आवश्यक रूप से संलग्न कर जमा करावे । नामांकित छात्र अंकतालिका की छाया प्रति (फोटो कॉपी) संलग्न करे ।	
+                                        (6).अभ्यर्थी , शुलक जमा कराने के बाद पूर्ण  भरे हुए आवेदन पत्र की फोटो प्रति एवं जमा करए गए शुल्क की रसीद अपने पास संधारित करे ।
+				(7).परीक्षा से सम्बंधित दिशा निर्देश विश्व्विद्यालय की परीक्षा कार्य की वेबसाइट https://shekhauniexam.in/ पर  देखे जा सकते है ।					  
+                            </p>
+                            <p class="note-head">महाविद्यालय / परीक्षा केंद्र हेतु नोट  : </p>
+                            <p class="hindi">सम्बंधित महाविद्यालय , परीक्षार्थी का फॉर्म जमा कराने से पूर्व आवेदन-पत्र की भली भांति जाँच कर सुनिश्चित कर ले की अभ्यर्थी परीक्षा के लिए योग्य है तथा उसके द्वारा फॉर्म में भरी गई समस्त सूचनाएं सही है । यदि किसी भी प्रकार की कमी के कारण न्यायिक वाद उत्पन होता है तो उसके लिए सम्बंधित महाविद्यालय उत्तरदायी होगा ।</p>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                    </table>
+                </div>
+
+                <br />
+                <p style="page-break-after: always; margin: 0px; padding: 0px; height: 0px;">
+                </p>
+                <div style="width: 860px; margin: auto; border: 1px solid #CCCCCC;">
+
+                    <table width="100%" style="background: #ffffffd1;">
+                        <tbody>
+                            <tr>
+                                <td class="left_bdr bottom_bdr upper_bdr" rowspan="2">
+                                    <img src="images/logo.png" style="width: 120px;" /></td>
+                                <td class="upper_bdr" align="center" width="20%"><span>Form Filled Date: </span>
+                                    <span id="Label36">30/05/2024</span></td>
+                                
+                                <td class="upper_bdr right_bdr" align="center" colspan="3"><span style="font-weight: bold;">UNIVERSITY COPY</span></td>
+                            </tr>
+                            <tr>
+
+                                <td class="right_bdr bottom_bdr" colspan="4" align="center">
+                                    <h3 class="college-name">PANDIT DEENDAYAL UPADHYAYA SHEKHAWATI UNIVERSITY, SIKAR (RAJ.)</h3>
+                                    <p>
+                                        <span id="Label37" class="course">B.A. SEMESTER II</span><strong class="course"> EXAM-2024 
+                                            (<span id="Label38" class="course">REGULAR</span>)
+                                             <span id="Label87" class="course"></span>
+                                        </strong>
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="left_bdr" colspan="4"><strong>College :</strong>
+                                    <span id="Label39">(489)-RAJKIYA KANYA MAHAVIDYALAYA AJEETGARH,  DISTT - SIKAR</span></td>
+                                <td class="left_bdr btm-rt_bdr"><strong>Form No. :
+                                    <span id="Label40">240382849</span></strong></td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="4"><strong>Exam Center :</strong></td>
+                                <td class="left_bdr btm-rt_bdr"><strong>Roll No. :</strong>
+                                    <span id="Label41">24163378</span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Student's Name :</strong> <b>
+                                    <span id="Label42">DIVYANSHI GUPTA</span></b></td>
+                                <td rowspan="12" style="vertical-align: middle; width: 10%;">
+                                    </td>
+                                <td class="left_bdr btm-rt_bdr" rowspan="6" align="center" style="padding: 0px; !important;">
+                                    
+                                    <img id="Image3" src="Image_2024/Photo/1e52a8dd-e3fc-4e7d-8e39-461f0781aae9.jpg" height="150" width="150" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Name in Hindi :</strong><b>
+                                    <span id="Label43">दिव्यांशी गुप्ता</span>
+                                </b></td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="2"><strong>Father's Name :</strong>
+                                    <span id="Label44">NARENDRA KUMAR GUPTA</span>
+                                </td>
+                                <td><strong>Father's Name Hindi :</strong>
+                                    <span id="Label45">नरेंद्र कुमार गुप्ता</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="2"><strong>Mother's Name :</strong>
+                                    <span id="Label46">ANJU DEVI</span>
+                                </td>
+                                <td><strong>Mother's Name Hindi :</strong>
+                                    <span id="Label47">अंजू देवी</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="2"><strong>Category :</strong>
+                                    <span id="Label48">GENERAL</span>
+                                </td>
+                                <td><strong>Sub Category :</strong>
+                                    <span id="Label49">NOT APPLICABLE</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="2"><strong>Religion :</strong>
+                                    <span id="Label50">HINDUISM</span>
+                                </td>
+                                <td><strong>E-Mail Id :</strong>
+                                    <span id="lblEmailId2">ANJUG9976@GMAIL.COM</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="2"><strong>Gender :</strong>
+                                    <span id="Label51">FEMALE</span>
+                                </td>
+                                <td><strong>Aadhar :</strong>
+                                    <span id="lblAadhar2">763156479345</span>
+                                </td>
+                            </tr>
+
+                             <tr>
+                                <td class="left_bdr" colspan="3"><strong> </strong>
+                                    
+                                    <strong>ABC ID. :</strong>
+                                    <span id="lbl_ABCID4">803514376040</span>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Date Of Birth :</strong><span id="Label52">27/07/2005</span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Medium :</strong>
+                                    <span id="Label53">Hindi</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Mobile No. :</strong>
+                                    <span id="Label54">7878587739</span>
+                                </td>
+                                <td class="left_bdr btm-rt_bdr upper_bdr" rowspan="3">
+                                    <center>
+                       <img id="Image4" src="Image_2024/Sign/b6d0fce3-eeae-4177-8ed5-944ed18ee588.jpg" height="70" width="150" />
+				                                                         </center>
+                                    <p>Signature of Candidate</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr" colspan="3"><strong>Address :</strong>
+                                    <span id="Label55">WARD NO-11 VPO- THOI THOI SIKAR RAJASTHAN 332719</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left_bdr bottom_bdr" colspan="2"><strong>Already Enrolled :</strong><span id="Label56">YES</span></td>
+                                <td class="bottom_bdr">
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td id="Td2"><strong>Enrollment No.:</strong>
+                                                    <span id="Label57">23/141609</span>
+                                                </td>
+
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="left_bdr">
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr upper_bdr" colspan="4" align="center"><strong>Details of Fee (Received)</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr" colspan="4" align="center">Payment Method : 
+                                                    <span id="Label72">Emitra</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr" colspan="4" align="center">Trans. id Token No. & Date :-
+                                                    <span id="Label58">240625178583</span>
+                                                    /
+                                                    <span id="Label59">30/05/2024</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr" width="25%">Exam Fee</td>
+                                                <td class="bt-rt-lt_bdr" width="25%">Rs. 
+                                                    <span id="Label60">1300.00</span></td>
+                                                <td class="bt-rt-lt_bdr" width="25%">Late Fee</td>
+                                                <td class="bt-rt-lt_bdr" width="25%">Rs. 
+                                                    <span id="Label61">0.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr">Enrol Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="Label62">0.00</span></td>
+                                                <td class="bt-rt-lt_bdr">Elig Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="Label63">0.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr">Spe.Devp Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="Label64">0.00</span></td>
+                                                <td class="bt-rt-lt_bdr">Sports Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="Label65">0.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr">Due Paper Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="Label66">0.00</span>
+                                                </td>
+                                                <td class="bt-rt-lt_bdr">Practical Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="Label67">100.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr">Practical Training Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs.  
+                                                    <span id="Label68">0.00</span></td>
+                                                <td class="bt-rt-lt_bdr">Total Fee</td>
+                                                <td class="bt-rt-lt_bdr">Rs. 
+                                                    <span id="Label69">1400.00</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td colspan="3" class="right_bdr" style="vertical-align: top;">
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr upper_bdr" colspan="3" align="center"><b>COMPILATION OF MARKS</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr upper_bdr" align="center">PART 1</td>
+                                                <td class="bt-rt-lt_bdr upper_bdr" align="center">PART 2</td>
+                                                <td class="bt-rt-lt_bdr upper_bdr" align="center">PART 3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr upper_bdr">
+                                                    <span id="Label82"></span></td>
+                                                <td class="bt-rt-lt_bdr upper_bdr">
+                                                    <span id="Label83"></span></td>
+                                                <td class="bt-rt-lt_bdr upper_bdr">
+                                                    <span id="Label84"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bt-rt-lt_bdr upper_bdr" colspan="5"><strong>Details of last Qualifying Examination passed</strong></td>
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td colspan="3">
+                                                    <div>
+	<table cellspacing="0" rules="all" class="all-bdr" border="1" id="GridView3" width="100%">
+		<tr>
+			<th scope="col">Name of Examination</th><th scope="col">Board/University</th><th scope="col"> Passing Year</th><th scope="col">Roll No</th><th scope="col">Marks</th><th scope="col">Result</th>
+		</tr><tr>
+			<td>Part-1</td><td> PDUSU SIKAR</td><td> 2024</td><td>24163378</td><td>
+                                                                    <span id="GridView3_lblObtMarks3_0">363</span>
+                                                                    /<span id="GridView3_lblMaxMarks3_0">500</span>
+                                                                </td><td>PAPR</td>
+		</tr>
+	</table>
+</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td colspan="5" class="bt-rt-lt_bdr">
+                                    
+                                    
+
+                                    
+                                    
+                                    
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="5" class="bt-rt-lt_bdr">
+                                    <table width="100%">
+                                        <tr>
+                                            <td class="btm-rt_bdr" align="center">
+                                                <h5>Subject / Papers Details for Examination 2024</h5>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="bt-rt-lt_bdr" style="padding: 0px;">
+                                                <table width="100%">
+                                                    <tr>
+                                                        <td class="btm-rt_bdr" align="center" style="width: 25%;">
+                                                            <h5>AEC</h5>
+                                                        </td>
+                                                        <td class="btm-rt_bdr" align="center" style="width: 25%;">
+                                                            <h5>SEMESTER I</h5>
+                                                        </td>
+                                                        <td class="btm-rt_bdr" align="center" style="width: 25%;">
+                                                            <h5>SEMESTER II</h5>
+                                                        </td>
+                                                        <td id="Td4" class="bottom_bdr" align="center" style="width: 25%;">
+                                                            <h5>SEMESTER III</h5>
+                                                        </td>
+
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="right_bdr">
+                                                            <div>
+	<table cellspacing="0" rules="all" class="all-bdr" border="1" id="grdcomp3" width="100%">
+		<tr>
+			<th scope="col">Paper Code-Paper</th>
+		</tr><tr>
+			<td>
+                                                                            <span id="grdcomp3_Paper_0">(UG0105)- (GEN-52T-101)- A COMPREHENSIVE INTRODUCTION</span>
+                                                                        </td>
+		</tr>
+	</table>
+</div>
+                                                        </td>
+                                                        <td style="vertical-align: top;">
+                                                            <div>
+
+</div>
+                                                        </td>
+                                                        <td style="vertical-align: top;">
+                                                            <div>
+	<table cellspacing="0" rules="all" class="all-bdr" border="1" id="grdpart6" width="100%">
+		<tr>
+			<th scope="col">Paper Code-Paper</th>
+		</tr><tr>
+			<td>
+                                                                            <span id="grdpart6_Paper_0">(UG0106)- (GEO-52T-103)- GEOGRAPHY OF RAJASTHAN</span>
+                                                                        </td>
+		</tr><tr>
+			<td>
+                                                                            <span id="grdpart6_Paper_1">(UG0106)- (GEO-52P-104)- GEOGRAPHY OF RAJASTHAN(PR)</span>
+                                                                        </td>
+		</tr><tr>
+			<td>
+                                                                            <span id="grdpart6_Paper_2">(UG0113)- (POL-52T-102)- INDIAN POLITICAL THOUGHT </span>
+                                                                        </td>
+		</tr><tr>
+			<td>
+                                                                            <span id="grdpart6_Paper_3">(UG0116)- (SAN-52T-102)- BHARTIYA SANSKRATI KE TATVA,PADH SAHITYA,VYAKARAN</span>
+                                                                        </td>
+		</tr>
+	</table>
+</div>
+                                                            <div>
+
+</div>
+                                                        </td>
+                                                        <td style="vertical-align: top;">
+                                                            <div>
+
+</div>
+                                                            <div>
+
+</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="bt-rt-lt_bdr">
+                                    <p class="subject">Certified that all above entries are correct to the best of my knowledge and belief. I am not appearing in any other University examination and there is no Um case against me. I have deposited Examination fee. Fee once deposited will not be refundable.   </p>
+                                    <p class="sign">Signature of Student</p>
+                                    <p class="subject">Certified that all above entries are checked and verified by college and student is eligible to appear in above mentioned examination. Examination fee has been deposited through emitra.</p>
+                                    <p class="sign">Signature and seal of principal</p>
+                                    <p class="subject">
+                                        All entries have been verified and checked through record and documents provided by student. Student is qualified / not qualified to apear in <span>
+                                            <span id="Label70">B.A. SEMESTER II</span></span>
+                                    </p>
+                                    <p class="sign">Full signature of checker in university</p>
+                                </td>
+                                <br />
+                                <table width="100%">
+                                    <br />
+                                    <tr>
+                                        
+                                    </tr>
+                                </table>
+                                <br />
+                                
+                            </tr>
+
+                            <tr>
+                                <td colspan="5" class="bt-rt-lt_bdr">
+                                    <p class="note-head">अभ्यर्थी हेतु नोट : </p>
+                                    <p class="hindi">
+                                        (1).अभ्यर्थी  यह भली भांति जाँच ले की फॉर्म नंबर , पेमेंट आई०  डी ०, टोकन नंबर , फॉर्म की प्रत्येक प्रति में एक समान एवं सही मुद्रित हुआ है ।
+				 (2).  पूर्ण भरे हुए आवेदन पत्र में यथा स्थान पर अपने हस्ताक्षर कर परीक्षा आवेदन पत्र की दोनों प्रतियां मय संलग्नको सम्बंधित महाविद्यालय में विशवविद्यालय द्वारा घोषित समय सीमा में आवश्यक रूप से जमा करावे ।
+                                        (3).नियमित एवं स्वयंपाठी छात्र अपना परीक्षा पत्र सम्बंधित महाविद्यालय में जमा करावे ।      
+                                       (4).शुल्क एक बार जमा कराने के बाद लौटाया नहीं जायेगा ।	     
+                                       (5). जिन छात्रों द्वारा पूर्व में PANDIT DEENDAYAL UPADHYAYA SHEKHAWATI UNIVERSITY, SIKAR (RAJ.) में नामांकन (एनरोलमेंट) नहीं करवाया गया है , ऐसे राजस्थान माध्यमिक शिक्षा बोर्ड , अजमेर से 12 वी कक्षा उत्तीर्ण छात्रों को छोड़कर अन्य छात्र नामांकन फॉर्म , मूल अंकतालिका एवं मूल माइग्रेशन प्रमाण पत्र परीक्षा आवेदन पत्र के साथ आवश्यक रूप से संलग्न कर जमा करावे । नामांकित छात्र अंकतालिका की छाया प्रति (फोटो कॉपी) संलग्न करे ।	
+                                        (6).अभ्यर्थी , शुलक जमा कराने के बाद पूर्ण  भरे हुए आवेदन पत्र की फोटो प्रति एवं जमा करए गए शुल्क की रसीद अपने पास संधारित करे ।
+				(7).परीक्षा से सम्बंधित दिशा निर्देश विश्व्विद्यालय की परीक्षा कार्य की वेबसाइट https://shekhauniexam.in/ पर  देखे जा सकते है ।					  
+                                    </p>
+                                    <p class="note-head">महाविद्यालय / परीक्षा केंद्र हेतु नोट  : </p>
+                                    <p class="hindi">सम्बंधित महाविद्यालय , परीक्षार्थी का फॉर्म जमा कराने से पूर्व आवेदन-पत्र की भली भांति जाँच कर सुनिश्चित कर ले की अभ्यर्थी परीक्षा के लिए योग्य है तथा उसके द्वारा फॉर्म में भरी गई समस्त सूचनाएं सही है । यदि किसी भी प्रकार की कमी के कारण न्यायिक वाद उत्पन होता है तो उसके लिए सम्बंधित महाविद्यालय उत्तरदायी होगा ।</p>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+
+                
+                <br />
+                 
+
+                            <p style="page-break-after: always; margin: 0px; padding: 0px; height: 0px;">
+                </p>
+                
+
+                  
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>
