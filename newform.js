@@ -5,6 +5,33 @@ const mongoose = require('mongoose');
 
 
 
+const express = require('express');
+
+const app = express();
+
+// Define a route for the root URL ('/') that returns a simple message
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+// Define a route for the '/api/data' URL that returns some sample data
+app.get('/api/data', (req, res) => {
+  const data = [
+    { id: 1, name: 'John' },
+    { id: 2, name: 'Jane' },
+    { id: 3, name: 'Bob' }
+  ];
+  res.json(data);
+});
+
+// Start the server on port 3000
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
+});
+
+
+
 const dbUrl = 'mongodb+srv://kamleshksks456:LtnGz4tLIcrsYj0j@cluster0.shgns95.mongodb.net/forms';
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Connected to MongoDB'))
